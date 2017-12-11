@@ -54,7 +54,7 @@ def authors():
         dict_authors[authors_json[i]['id']] = authors_json[i]['name']
     for j in range(0, len(posts_json)):
         dict_posts[posts_json[j]['id']] = posts_json[j]['userId']
-    for (key, value) in dict_posts.items():
+    for (key, value) in list(dict_posts.items()):
         temp_list.append(dict_posts[key])
     for k in set(temp_list):
         dict_posts_count[k] = temp_list.count(k)
@@ -72,12 +72,8 @@ def set_cookie():
                         message='Your cookies are being set'))
     if 'name' not in request.cookies:
         res.set_cookie('name', value='varshaa')
-    else:
-        print 'name cookie already set'
     if 'age' not in request.cookies:
         res.set_cookie('age', value='24')
-    else:
-        print 'age cookie already set'
     return res
 
 
