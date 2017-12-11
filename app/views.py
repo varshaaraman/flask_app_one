@@ -8,7 +8,7 @@ from flask import render_template
 from flask import make_response
 from flask import request
 from flask import abort
-from form import TextFieldForm
+from .form import TextFieldForm
 from flask import url_for
 from flask import redirect
 
