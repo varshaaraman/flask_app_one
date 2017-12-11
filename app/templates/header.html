@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+</head>
+<header>
+  <div class="container">
+    <table>
+      <tr>
+        <td> <img src="{{ url_for('static', filename='images/hasura.png') }}" alt="logo"></td>
+        <td>
+          <h2 class="logo"><marquee>HASURA PRODUCT DEVELOPMENT FELLOWSHIP</marquee></h2></td>
+		  <td>
+		  <nav>
+      <ul>
+        <h4><a href="{{ url_for('message') }}">Home</a> |
+        <a href="{{ url_for('authors') }}">Authors</a> |
+        <a href="{{ url_for('set_cookie') }}">Set Cookie</a> |
+		<a href="{{ url_for('get_cookie') }}">Get Cookie</a> |
+		<a href="{{ url_for('deny') }}">Deny</a> |
+		<a href="{{ url_for('input') }}">Forms</a> |
+		<a href="{{ url_for('image') }}">Image</a> |
+      </ul></h4>
+    </nav>
+		  
+		  </td>
+      </tr>
+    </table>
+   
+  </div>
+
+</header>
+{% block content %}{% endblock  %}
+<html>

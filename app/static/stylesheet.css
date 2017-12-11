@@ -1,0 +1,24 @@
+header img,
+    header nav {
+      display: inline-block;
+      vertical-align: middle;
+      font-family:serif
+	  
+    }
+	
+.container{
+	background-color:red;
+  font-family:serif
+	}
+
+
+body {
+    color: white;
+    font-family: monospace;
+    background-color:black
+} 
+
+body img{
+	background-color:white
+	
+}

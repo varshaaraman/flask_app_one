@@ -1,0 +1,21 @@
+{% extends 'header.html' %}
+{% block content %}
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sheet.css') }}">
+</head>
+	<body>
+	<h4><b><i><u>Authors and their posts</b></i></u></h4>
+		<table border=1>
+			<tr>
+				<th>Author</th>
+				<th>Posts</th>
+			</tr>
+			{% for i in posts_count %}
+			<tr>
+				<td> {{ authors[i] }} </td> 
+				<td> {{ posts_count[i] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+{% endblock %}

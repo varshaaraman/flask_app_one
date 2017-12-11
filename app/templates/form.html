@@ -1,0 +1,18 @@
+{% extends 'header.html' %}
+{% block content %}
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sheet.css') }}">
+</head>
+
+	<body>
+	<h1>INPUT HERE :</h1>
+		<form action="{{ url_for('output') }}" method="post" name="Input Form">
+		{{ form.hidden_tag() }}
+		<p>
+          Please enter your text:<br>
+          {{ form.input_field }}<br>
+		</p>
+		<p class=button><input type="submit" value="Submit"></p>
+		</form>
+	</body>
+{% endblock %}

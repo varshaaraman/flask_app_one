@@ -1,0 +1,11 @@
+{% extends 'header.html' %}
+{% block content %}
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sheet.css') }}">
+</head>
+		<body>
+		<h1>COOKIES</h1>	
+		<p>{{ message_name }}</p>
+		<p>{{ message_age }}</p>
+	</body>
+{% endblock %}
