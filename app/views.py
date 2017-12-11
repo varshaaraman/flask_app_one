@@ -50,16 +50,12 @@ def authors():
 
     authors_json = simplejson.loads(response_authors_json_text)
     posts_json = simplejson.loads(response_posts_json_text)
-    print authors_json
-    print posts_json
     for i in range(0, len(authors_json)):
         dict_authors[authors_json[i]['id']] = authors_json[i]['name']
     for j in range(0, len(posts_json)):
         dict_posts[posts_json[j]['id']] = posts_json[j]['userId']
-    print dict_posts
     for (key, value) in dict_posts.items():
         temp_list.append(dict_posts[key])
-    print temp_list
     for k in set(temp_list):
         dict_posts_count[k] = temp_list.count(k)
 
@@ -71,8 +67,9 @@ def authors():
 def set_cookie():
     """ Makes a response and checks if the cookies are already
     set. If not set, sets and returns them"""
+
     res = make_response(render_template('message.html',
-                                        message="Your cookies are being set"))
+                        message='Your cookies are being set'))
     if 'name' not in request.cookies:
         res.set_cookie('name', value='varshaa')
     else:
@@ -97,14 +94,17 @@ def get_cookie():
 @app.route('/deny', methods=['GET', 'POST'])
 def deny():
     """ Denies access to /deny endpoint"""
+
     abort(403)
-    return (render_template('message.html',
-            message="You dont have access to the requested page"))
+    return render_template('message.html',
+                           message='You dont have access to the requested page'
+                           )
 
 
 @app.route('/output', methods=['POST', 'GET'])
 def output():
     """ If the method is post retrieves form data and displays the same """
+
     if request.method == 'POST':
         output = request.form['input_field']
     return render_template('output.html', value=output)
@@ -123,3 +123,5 @@ def image():
     """ Renders an image """
 
     return render_template('image.html')
+
+			
