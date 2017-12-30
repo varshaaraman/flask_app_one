@@ -12,7 +12,7 @@ In case the app is not awake for some reasons or out of your personal interest i
 3. Once everything is up and running, type :
    1.go to the apps root directory
    2. python setup.py install 
-   3. pip -r requirements.txt
+   3. pip install -r requirements.txt
  4.The app would start running in the local host : 127.0.0.1
  5. You will be directed to the home page that displays hello world.
  6.Every page has a header which hyperlinks to each of the tasks assigned. This can be used as the primary means of navigation
