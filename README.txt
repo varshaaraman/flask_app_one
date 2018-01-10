@@ -1,4 +1,6 @@
-The app has been hosted at  https://protected-woodland-97549.herokuapp.com/.
+The app has been hosted at :
+> https://protected-woodland-97549.herokuapp.com/.
+> https://app.bloodthirstily50.hasura-app.io/
 You shall head to the same any time so as to access the app.
 In case the app is not awake for some reasons or out of your personal interest if you want to run it locally, the following steps need to be followed :
 
@@ -27,4 +29,4 @@ In case the app is not awake for some reasons or out of your personal interest i
  Feel free to exlore!!
    
    
-   https://protected-woodland-97549.herokuapp.com/
+ 
